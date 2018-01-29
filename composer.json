@@ -15,14 +15,13 @@
         "ext-pdo": "*",
         "twig/twig": "1.*",
         "swiftmailer/swiftmailer": "5.*",
-        "mikecao/flight": "1.3.*",
+        "mikecao/flight": "dev-master",
         "jdorn/sql-formatter": "dev-master",
         "jdorn/file-system-cache": "dev-master",
-        "phpoffice/phpexcel": "1.*",
-        "adodb/adodb-php": "5.*",
+        "phpoffice/phpexcel": "dev-develop",
+        "adodb/adodb-php": "dev-master",
         "lespoilus/spyc": "dev-master",
-        "google/apiclient": "1.0.*",
-        "yajra/laravel-pdo-via-oci8": "1.*"
+        "google/apiclient": "1.0.*@beta"
     },
     "autoload": {
         "files": [
