@@ -28,5 +28,5 @@ RUN printf '[PHP]\ndate.timezone = "Europe/Oslo"\n' > /usr/local/etc/php/conf.d/
 
 COPY docker.vhost.conf /etc/nginx/sites-enabled/default
 
-VOLUMES ["/usr/share/nginx/html/sample_reports", "/usr/share/nginx/html/sample_dashboards"]
+VOLUME ["/usr/share/nginx/html/sample_reports", "/usr/share/nginx/html/sample_dashboards"]
 CMD ["nginx", "-g", "daemon off;"]
