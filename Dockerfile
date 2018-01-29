@@ -18,7 +18,7 @@ COPY composer.json composer.json
 RUN composer update && composer install
 
 ADD . /usr/share/nginx/html
-COPY docker.config.php /usr/share/nginx/html/config/
+COPY docker.config.php /usr/share/nginx/html/config/config.php
 
 # Writable cache dir
 RUN mkdir -p cache && chmod 0777 cache
@@ -29,4 +29,4 @@ RUN printf '[PHP]\ndate.timezone = "Europe/Oslo"\n' > /usr/local/etc/php/conf.d/
 COPY docker.vhost.conf /etc/nginx/sites-enabled/default
 
 VOLUME ["/usr/share/nginx/html/sample_reports", "/usr/share/nginx/html/sample_dashboards"]
-CMD ["nginx", "-g", "daemon off;"]
+CMD php-fpm & nginx -g "daemon off;"
